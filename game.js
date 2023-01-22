@@ -138,3 +138,18 @@ $(document).keypress(function() {
         $('h1').text('Level ' + level);
     }
 })
+
+// Add a listener for the start button as an alternative
+$('.start').click(function() {
+    // Check for the game being active
+    if (gameActive === false) {
+        // Set the game start to true
+        gameActive = true;
+        
+        // Get the first sequence
+        nextSequence();
+
+        // Set the game header to the level
+        $('h1').text('Level ' + level);
+    }
+})
